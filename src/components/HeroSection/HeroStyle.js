@@ -93,19 +93,35 @@ export const HeroRightContainer = styled.div`
 `;
 
 export const Img = styled.img`
-width: 100%;
-height: 100%;
-max-width: 400px;
-max-height: 400px;
-border-radius: 50%;
-border: 5px solid ${({ theme }) => theme.primary};
-box-shadow: 0 10px 20px rgba(0,0,0,0.2); // Adding a shadow for depth
-transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 50%;
+  border: 2px solid ${({ theme }) => theme.primary};
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out;
 
-&:hover {
-  transform: scale(1.05); // Slightly enlarging the image on hover
-}
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 960px) {
+    max-width: 350px; // Slightly smaller on tablets
+    max-height: 350px;
+  }
+
+  @media (max-width: 640px) {
+    max-width: 300px; // Even smaller on mobile devices
+    max-height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 250px; // Smallest for very small devices
+    max-height: 250px;
+  }
 `;
+
 
 export const Title = styled.div`
   font-weight: 700;
