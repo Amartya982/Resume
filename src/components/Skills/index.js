@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95%; // Use a percentage to ensure padding on very small devices
+  width: 90%; // Use a percentage to ensure padding on very small devices
   max-width: 1100px;
   
   gap: 30px;
@@ -85,7 +85,7 @@ const Skill = styled.article`
   }
 
   @media (max-width: 480px) {
-    max-width: 95%; // Further flexibility for very small devices
+    max-width: 80%; // Further flexibility for very small devices
     padding: 15px; // Slightly reduce padding
   }
 `;
