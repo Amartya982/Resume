@@ -83,7 +83,7 @@ export const skills = [
 
 export const experiences = [
   {
-    id: 0,
+    id: 3,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/neurobit.jpeg?alt=media&token=1cacbb7b-e5ea-4efb-9b3d-f5a31b9564ad",
     role: "Project Coordinator- (On Contract)",
     company: "LOTUS BRIDGE TECHNOLOGY LLP",
@@ -101,7 +101,7 @@ export const experiences = [
     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202024-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058",
   },
   {
-    id: 1,
+    id: 2,
     img: "https://mma.prnewswire.com/media/2086383/Magic_Bus_Logo.jpg?p=facebook",
     role: "Trainer Cum Placement Counsellor",
     company: "MAGIC BUS INDIA FOUNDATION",
@@ -122,7 +122,7 @@ export const experiences = [
     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1696514649120.jpeg?alt=media&token=e7f6757b-edfa-4138-a692-d6709eeef3e2",
   },
   {
-    id: 2,
+    id: 1,
     img: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Teamleaselogo.png",
     role: "Freelance HR Recruiter",
     company: "TEAM LEASE INDIA",
@@ -141,7 +141,7 @@ export const experiences = [
     doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
   },
   {
-    id: 3,
+    id: 0,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMPQgR0p1hnvACK6DN3LxPQYJl4RhPGBuHBcnCO_0_HM3mfygQH3kL4s&s=10",
     role: "Human Resource Manager",
     company: "Zuraverse",
