@@ -133,7 +133,7 @@ const Skills = () => {
               <SkillList>
                 {skill.skills.map((item) => (
                   <SkillItem>
-                    <SkillImage src={item.image}/>
+                    <SkillImage src={item.image} className="skill-icon"/>
                     {item.name}
                   </SkillItem>
                 ))}

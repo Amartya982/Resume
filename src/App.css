@@ -17,6 +17,21 @@ body{
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
+.skill-icon {
+  filter: invert(33%) sepia(100%) saturate(4000%) hue-rotate(258deg) brightness(90%) contrast(103%) !important;
+  animation: colorShift 2s infinite !important;
+
+  
+}
+@keyframes colorShift {
+  from {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(360deg) brightness(100%) contrast(100%);
+  }
+  to {
+    filter: invert(33%) sepia(100%) saturate(4000%) hue-rotate(258deg) brightness(90%) contrast(103%);
+  }
+}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -39,3 +54,5 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #626970;
   }
+ 
+  
