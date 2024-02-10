@@ -93,32 +93,32 @@ export const HeroRightContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
-  border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+width: 100%;
+height: 100%;
+max-width: 400px;
+max-height: 400px;
+border-radius: 50%;
+border: 5px solid ${({ theme }) => theme.primary};
+box-shadow: 0 10px 20px rgba(0,0,0,0.2); // Adding a shadow for depth
+transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 768px) {
-    max-width: 400px;
-    max-height: 400px;
-  }
-
-  @media (max-width: 640px) {
-    max-width: 280px;
-    max-height: 280px;
-  }
+&:hover {
+  transform: scale(1.05); // Slightly enlarging the image on hover
+}
 `;
 
 export const Title = styled.div`
   font-weight: 700;
-  font-size: 50px;
+
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
   @media (max-width: 960px) {
     text-align: center;
+  } font-size: 48px;
+  color: ${({ theme }) => theme.text_primary};
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); // Adding a subtle shadow for better readability
+  @media (max-width: 768px) {
+    font-size: 36px;
   }
 
   @media (max-width: 640px) {
@@ -151,11 +151,12 @@ export const Span = styled.span`
 `;
 
 export const SubTitle = styled.div`
-  font-size: 20px;
-  line-height: 32px;
-  margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
-
+font-size: 20px;
+color: ${({ theme }) => theme.text_secondary};
+margin-top: 20px;
+margin-bottom: 20px;
+max-width: 600px;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.1); // Improve readability over the dynamic background
   @media (max-width: 960px) {
     text-align: center;
   }
@@ -192,6 +193,11 @@ export const ResumeButton = styled.a`
     transition: all 0.4s ease-in-out;
     box-shadow:  20px 20px 60px #1F2634,
     filter: brightness(1);
+  
+      background: linear-gradient(45deg, hsla(271, 100%, 60%, 1), hsla(294, 100%, 60%, 1)); // Lighten the gradient on hover
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2); // Adding a shadow on hover for depth
+      transform: translateY(-2px); // Lift the button slightly on hover
+    
     }    
     
     

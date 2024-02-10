@@ -18,11 +18,25 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 .skill-icon {
-  filter: invert(33%) sepia(100%) saturate(4000%) hue-rotate(258deg) brightness(90%) contrast(103%) !important;
-  animation: colorShift 2s infinite !important;
-
-  
+  filter: brightness(0) invert(1); /* This will make the icons white */
+  animation: pulse 2s infinite;
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
 .hero-image{
  /* Fixed height */
 

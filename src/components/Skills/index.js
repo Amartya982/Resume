@@ -1,122 +1,126 @@
-import React from 'react'
-import styled from 'styled-components'
-import { skills } from '../../data/constants'
+import React from 'react';
+import styled from 'styled-components';
+import { skills } from '../../data/constants';
 
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-`
+const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+`;
 
 const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  gap: 30px; // Consistent gap size
+`;
 
-export const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
+export const Title = styled.h2`
+  font-size: 42px;
+  font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 16px;
+  text-align: center;
+
   @media (max-width: 768px) {
-margin-top: 12px;
-      font-size: 32px;
+    font-size: 32px;
   }
 `;
 
-export const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
+export const Desc = styled.p`
+  font-size: 18px;
+  max-width: 600px;
+  color: ${({ theme }) => theme.text_secondary};
+  text-align: center;
+  margin-bottom: 30px; // Add some space before the list of skills
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const SkillsContainer = styled.div`
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
-  gap: 30px;
   justify-content: center;
-`
+  gap: 30px; // Increased gap for better visual separation
+`;
 
-const Skill = styled.div`
+const Skill = styled.article`
   width: 100%;
-  max-width: 500px;
-  background: ${({ theme }) => theme.card};
-  border: 0.1px solid #854CE6;
+  max-width: 350px; // Slightly reduced max-width for better fit
+  
+  
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
+  border-radius: 20px; // Increased border-radius for a more modern look
+  padding: 20px;
+  text-align: center; // Center text for better readability
+ 
+  border: px solid ${({ theme }) => theme.primary}; // Thicker border for more emphasis
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // Smooth transition for hover effects
+
+  &:hover {
+    transform: translateY(-5px); // Slightly lift the card on hover for a dynamic effect
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18); // Enhanced shadow on hover for a 'pop' effect
+  }
   @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
+    max-width: 100%;
+    padding: 20px;
   }
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
-  }
+`;
 
 
-`
-
-const SkillTitle = styled.h2`
-  font-size: 28px;
+const SkillTitle = styled.h3`
+  font-size: 24px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  color: #854CE6;
   margin-bottom: 20px;
-  text-align: center;
-`
+`;
 
 const SkillList = styled.div`
   display: flex;
-  justify-content: center; 
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
-  margin-bottom: 20px;
-`
+`;
 
 const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  color: ${({ theme }) => theme.text_primary};
+  background: ${({ theme }) => theme.background};
+  border: 1px solid rgba(23, 92, 230, 0.2); // A more subtle border
   border-radius: 12px;
-  padding: 12px 16px;
-  display: flex;
+  padding: 10px 16px;
+  margin: 0 4px 4px 0;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 8px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Enhanced shadow on hover
   }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-`
+`;
+
 
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
-`
+  margin-right: 8px;
+  /* Adjust the filter to make sure the image is visible and matches your design */
+  filter: brightness(0) invert(1); // This will make images white
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1); // Example hover effect, scaling up the icon
+  }
+`;
 
 
 const Skills = () => {
@@ -124,27 +128,27 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>Here are some of my skills on which I have been working on for the past 2 years.
+        <Desc>
+          Here are some of my skills on which I have been working on for the past 2 years.
         </Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
+          {skills.map((skill, index) => (
+            <Skill key={index}>
+         
               <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image} className="skill-icon"/>
+                {skill.skills.map((item, itemIndex) => (
+                  <SkillItem key={itemIndex}>
+                    <SkillImage  src={item.image} alt={`${item.name} icon`} />
                     {item.name}
                   </SkillItem>
                 ))}
               </SkillList>
             </Skill>
           ))}
-
         </SkillsContainer>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
