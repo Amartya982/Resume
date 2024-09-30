@@ -11,7 +11,7 @@ export const Bio = {
 "A HR professional with a keen eye for talent and organizational development, I'm on the lookout for opportunities to bring my experience in strategic HR management to life. I excel in creating inclusive work environments and am adept at navigating the latest in HR technologies, ready to contribute to a dynamic team's success.",
   github: "https://www.linkedin.com/in/payal-kumari-1b9b82251/",
   resume:
-    "https://drive.google.com/file/d/12fG__D8y4a4zV9OESh0GSH4q4XD2ZYwo/view?usp=drive_link",
+    "https://drive.google.com/file/d/1ZPg8lYk4fSrxcuBwrcXylaBn-3NP1jTJ/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/payal-kumari-1b9b82251/",
 
   insta: "https://www.instagram.com/payalkri__/",
